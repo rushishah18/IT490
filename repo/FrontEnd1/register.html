@@ -1,0 +1,102 @@
+<html> 
+<head></head>
+<title>Static Dropdown List</title>
+<body bgcolor="white"> 
+<div class="w3-orange w3-padding-64" style="width:50%;margin: 0 auto;padding: 10px 0;">
+
+                  <div class="w3-conatiner w3-center">
+
+                  <style>
+body {
+  background-image: url('https://api.drinkiq.com/PR1632api.drinkiq.com/media/k2ropbss/isittruethatbeer-hero-16-9-1600x900.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+
+<div class="container">
+          <H1 align="center"> Variety Alcoholic Beverages! </H1>
+          <H1 align="left"> Sign up </H1>
+        <hr>
+
+   <form method="post" action="register.php">
+
+   	 <div class="input-group">
+         <label>Full Name:</label>
+          <input type="text" name="name" placeholder="Full Name: " required autofocus   autocomplete=off>
+        </div>
+	<div class="input-group">
+          <label>Username: </label>
+          <input type="text" name="username" placeholder="Username: " required autofocus   autocomplete=off>
+        </div>
+        <div class="input-group">
+          <label>Email:</label>
+          <input type="email" name="email" placeholder="Email: " required autofocus   autocomplete=off>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Password: " required autofocus   autocomplete=off>
+        </div>
+        <div class="input-group">
+          <label>Confirm password</label>
+          <input type="password" name="confirmpassword" placeholder="Confirm  password: " required autofocus   autocomplete=off>
+        </div>
+
+      <head>  
+        
+          <script>  
+          function ageCalculator() {  
+              var userinput = document.getElementById("DOB").value;  
+              var dob = new Date(userinput);  
+              if(userinput==null || userinput=='') {  
+                document.getElementById("message").innerHTML = "**Choose a date please!";    
+                return false;   
+              } else {  
+                
+              //calculate month difference from current date in time  // baljit singh
+	      var month_diff = Date.now() - dob.getTime();     
+              //convert the calculated difference in date format  
+              var age_dt = new Date(month_diff);      
+              //extract year from date      
+              var year = age_dt.getUTCFullYear();    
+              //now calculate the age of the user  
+              var age = Math.abs(year - 1970);  
+                
+              //display the calculated age  
+              if(age < 21){                                                               /////////////use pop up if under age/////////////
+                
+                alert("You are under age, you must be 21 YEARS OLD" );
+                window.location.href = "register.html"; 5000;
+                return document.getElementById("result").innerHTML = "redirecting "; }
+  
+              else{ "Age is accepted"}}}  ///// need to push to database
+  
+          </script>  
+      </head>
+
+          <body>
+          <left>
+          <!--<h2 style="color: 32A80F" align="center"> Calculate Age from Date of Birth <br> <br> </h2>  -->
+
+          <!-- Choose a date and enter in input field -->
+          <b> Enter Date of Birth: <input type=date id = DOB> </b>
+           <br><br>
+
+          <!-- Choose a date -->
+          <button type="submit" onclick = "ageCalculator()"> Calculate age </button> <br><br>
+          </center>
+          </body>
+
+   <p>By creating an account you agree to our <a href="https://www.nj.gov/oag/abc/downloads/abcmunicipalhandbook.pdf" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+	<div class="input-group">
+          <button type="submit" class="btn" name="sign_up_request">Register</button>
+        </div>
+        <p>
+                Already a member? <a href="login.html">Login</a>
+        </p>
+ </form>
+	
+</body> 
+<html>
